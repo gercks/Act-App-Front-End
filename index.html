@@ -1,25 +1,78 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>ActApp</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
-
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+      <h1>ActApp</h1>
+      <div class="user-interface">
+      <div id="sign-in-dropdown" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign Up!</b></a>
+      			<ul class="dropdown-menu">
+      					 <div class="row">
+      							<div class="col-md-12">
+                      <form id="sign-up">
+                        <fieldset>
+                        <input name="credentials[email]" type="text" placeholder="enter your email">
+                        <input name="credentials[password]" type="password" placeholder="enter your password">
+                        <input name="credentials[password_confirmation]" type="password" placeholder="confirm password">
+                        <input type="submit" name="submit" value="Sign up!">
+                      </fieldset>
+                      </form>
+      							</div>
+      					 </div>
+             </ul>
+           </div>
+              <!-- beginning of sign in -->
+              <div id="sign-up-dropdown" class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Sign in!</b></a>
+            <ul class="dropdown-menu">
+                 <div class="row">
+                    <div class="col-md-12">
+                      <form id="sign-in">
+                        <fieldset>
+                          <input name="credentials[email]" type="text" placeholder="enter your email">
+                          <input name="credentials[password]" type="password" placeholder="enter your password">
+                          <input type="submit" name="submit" value="Sign in!">
+                        </fieldset>
+                      </form>
+                      </div>
+                    </div>
+                  </ul>
+          </div>
+              <!-- beginning of change password -->
+              <div class="hideme">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Change Password</b></a>
+            <ul class="dropdown-menu">
+                 <div class="row">
+                    <div class="col-md-12">
+                        <form id="change-password">
+                        <fieldset>
+                          <input name="passwords[old]" type="password" placeholder="enter old password">
+                          <input name="passwords[new]" type="password" placeholder="enter new password">
+                          <input type="submit" name="submit" value="Change Password">
+                        </fieldset>
+                      </form>
+                      </div>
+                    </div>
+            </ul>
+          </div>
+      <div class="dropdown">
+        <a id="sign-out" href="#">Sign Out!</a>
+      </div>
+      </div>
+    </div>
+<h2 id="message">hey</h2>
+      <p>Hey welcome what's up hello</p>
     </body>
 </html>
