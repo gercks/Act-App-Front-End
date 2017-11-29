@@ -6,7 +6,7 @@
 
       <!-- Do not add `link` tags-->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+      <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous"> -->
 
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
@@ -72,7 +72,18 @@
       </div>
       </div>
     </div>
-<h2 id="message">hey</h2>
+<h2 id="message"></h2>
+<div>
+  <h3>Create Event!</h3>
+  <form id="create-event">
+    <fieldset>
+      <input name="event[name]" type="text" placeholder="enter your event name">
+      <input name="event[date]" type="date" placeholder="enter the date">
+      <input name="event[description]" type="text" placeholder="enter the description">
+      <input type="submit" name="submit" value="Create Event!">
+    </fieldset>
+  </form>
+</div>
       <p>Hey welcome what's up hello</p>
     </body>
 </html>
