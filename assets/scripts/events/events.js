@@ -15,8 +15,31 @@ const onCreateEvent = function (event) {
     .catch(ui.createEventFailure)
 }
 
+const onEventIndex = function (event) {
+  event.preventDefault()
+  console.log('getting events!')
+
+  const data = getFormFields(this)
+  api.eventIndex(data)
+    .then(ui.eventIndexSuccess)
+    .catch(ui.eventIndexFailure)
+}
+
+const onEventUpdate = function (event) {
+  event.preventDefault()
+  console.log('updating your event!')
+
+  const data = getFormFields(this)
+  console.log('hey' + data.event.id)
+  api.eventUpdate(data)
+    .then(ui.eventUpdateSuccess)
+    .catch(ui.eventUpdatefailure)
+}
+
 const addHandlers = () => {
   $('#create-event').on('submit', onCreateEvent)
+  $('#eventIndex').on('click', onEventIndex)
+  $('#event-update').on('submit', onEventUpdate)
 }
 
 module.exports = {
