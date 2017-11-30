@@ -30,7 +30,7 @@ const onEventUpdate = function (event) {
   console.log('updating your event!')
 
   const data = getFormFields(this)
-  console.log('hey' + data.event.id)
+  console.log(data.event.id)
   api.eventUpdate(data)
     .then(ui.eventUpdateSuccess)
     .catch(ui.eventUpdatefailure)

@@ -39,7 +39,7 @@ const eventSearch = function (id) {
 const eventUpdate = function (data) {
   console.log(data.id)
   return $.ajax({
-    url: config.apiOrigin + '/events/' + data.event.id,
+    url: config.apiOrigin + '/events/' + data.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
