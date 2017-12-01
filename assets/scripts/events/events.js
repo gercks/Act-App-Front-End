@@ -36,10 +36,21 @@ const onEventUpdate = function (event) {
     .catch(ui.eventUpdatefailure)
 }
 
+const onEventDelete = function (event) {
+  event.preventDefault()
+  console.log('deleting your event!')
+  const data = getFormFields(this)
+  console.log(data)
+  api.eventDelete(data)
+    .then(ui.eventDeleteSuccess)
+    .catch(ui.eventDeletefailure)
+}
+
 const addHandlers = () => {
   $('#create-event').on('submit', onCreateEvent)
   $('#eventIndex').on('click', onEventIndex)
   $('#event-update').on('submit', onEventUpdate)
+  $('#event-delete').on('submit', onEventDelete)
 }
 
 module.exports = {

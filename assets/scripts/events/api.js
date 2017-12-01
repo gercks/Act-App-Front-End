@@ -39,7 +39,7 @@ const eventSearch = function (id) {
 const eventUpdate = function (data) {
   console.log(data.id)
   return $.ajax({
-    url: config.apiOrigin + '/events/' + data.id,
+    url: config.apiOrigin + '/events/' + data.event.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
@@ -48,9 +48,20 @@ const eventUpdate = function (data) {
   })
 }
 
+const eventDelete = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/events/' + data.event.id,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   createEvent,
   eventIndex,
   eventSearch,
-  eventUpdate
+  eventUpdate,
+  eventDelete
 }

@@ -26,13 +26,23 @@ const eventIndexFailure = function (error) {
   console.error(error)
 }
 
-const updateEventSuccess = function (data) {
-  $('#message').text('Event created successfully')
+const eventUpdateSuccess = function (data) {
+  $('#message').text('Event updated successfully')
   console.log(data)
 }
 
-const updateEventFailure = function (data) {
+const eventUpdateFailure = function (data) {
   $('#message').text('event update failed')
+  console.log(data)
+}
+
+const eventDeleteSuccess = function (data) {
+  $('#message').text('Event deleted successfully')
+  console.log(data)
+}
+
+const eventDeleteFailure = function (data) {
+  $('#message').text('event delete failed')
   console.log(data)
 }
 
@@ -41,6 +51,8 @@ module.exports = {
   eventIndexFailure,
   createEventSuccess,
   createEventFailure,
-  updateEventSuccess,
-  updateEventFailure
+  eventUpdateSuccess,
+  eventUpdateFailure,
+  eventDeleteSuccess,
+  eventDeleteFailure
 }
