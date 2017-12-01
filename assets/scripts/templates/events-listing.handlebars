@@ -1,14 +1,12 @@
 {{#each events as |event|}}
 
-
+<div class="handlebars"
    <!-- Developers, why are we using data-id and not just id? -->
-  <h4 data-id="{{event.id}}"> <small>Name: {{event.name}}</small></h4>
+  <h4 data-id="{{event.id}}">Event: {{event.name}}</h4>
   <div>
-    {{#if event.description}}
-      {{event.description}}
-      {{event.id}}
-    {{else}}
-      No description.
-    {{/if}}
+    <p>Date: {{event.date}} </p>
+  <p>About: {{event.description}} </p>
+    <p>Event id: {{event.id}}</p>
   </div>
+</div>
 {{/each}}

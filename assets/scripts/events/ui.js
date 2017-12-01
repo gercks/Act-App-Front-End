@@ -7,6 +7,7 @@ const showEventsTemplate = require('../templates/events-listing.handlebars')
 const createEventSuccess = function (data) {
   $('#message').text('Event created successfully')
   console.log(data)
+  $('input').val('')
 }
 
 const createEventFailure = function (error) {
@@ -29,6 +30,7 @@ const eventIndexFailure = function (error) {
 const eventUpdateSuccess = function (data) {
   $('#message').text('Event updated successfully')
   console.log(data)
+  $('input').val('')
 }
 
 const eventUpdateFailure = function (data) {
@@ -39,6 +41,7 @@ const eventUpdateFailure = function (data) {
 const eventDeleteSuccess = function (data) {
   $('#message').text('Event deleted successfully')
   console.log(data)
+  $('input').val('')
 }
 
 const eventDeleteFailure = function (data) {

@@ -4,6 +4,7 @@ const store = require('../store')
 
 const signUpSuccess = function (data) {
   $('#message').html('Signed up successfully')
+  $('input').val('')
   console.log(data)
 }
 
@@ -14,9 +15,11 @@ const signUpFailure = function (error) {
 
 const signInSuccess = function (response) {
   $('#message').html('Signed in successfully')
-  $('.hideme').show()
-  $('#sign-up-dropdown').hide()
-  $('#sign-in-dropdown').hide()
+  $('.signedinactions').show()
+  $('#auth-actions').hide()
+  $('.user-actions').show()
+  $('input').val('')
+  // $sign.children('input').html('')
   console.log('signIn success ran. data is :', response)
   store.user = response.user
 }
@@ -30,8 +33,8 @@ const signOutSuccess = function () {
   $('#message').html('Signed out successfully')
   console.log('signOut success ran. and nothing was returned')
   store.user = null
-  $('#sign-up-dropdown').show()
-  $('#sign-in-dropdown').show()
+  $('#auth-actions').show()
+  $('#user-actions').hide()
 }
 
 const signOutFailure = function (error) {
@@ -41,6 +44,7 @@ const signOutFailure = function (error) {
 
 const changePasswordSuccess = function () {
   $('#message').html('Changed password successfully')
+  $('input').val('')
   console.log('changePassword success ran. and nothing was returned')
 }
 

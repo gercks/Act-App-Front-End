@@ -1,9 +1,35 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+body {
+  background-color: #FFCA33;
+}
 h1 {
   font-size: 56px;
   color: pink;
   background-color: yellow;
   text-align: center;
 };
+
+h4 {
+  color: #FF4233;
+}
+
+p {
+  color: #FF4233;
+}
+
+#signedinactions {
+  float: right;
+}
+
+.handlebars {
+  background-color: white;
+}
+
+#auth-actions {
+  border: 1px solid blue;
+  padding: 10px;
+  margin: auto;
+  margin: 10px 200px;
+}

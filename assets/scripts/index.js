@@ -12,7 +12,9 @@ $(() => {
 $(() => {
   authEvents.addHandlers()
   eventsEvents.addHandlers()
+  $('.user-actions').hide()
 })
+
 // use require with a reference to bundle the file and use it in this file
 // const example = require('./example')
 

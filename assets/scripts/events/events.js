@@ -8,7 +8,6 @@ const ui = require('./ui')
 const onCreateEvent = function (event) {
   event.preventDefault()
   console.log('event created!')
-
   const data = getFormFields(this)
   api.createEvent(data)
     .then(ui.createEventSuccess)
