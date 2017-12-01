@@ -34,7 +34,7 @@ const signOutSuccess = function () {
   console.log('signOut success ran. and nothing was returned')
   store.user = null
   $('#auth-actions').show()
-  $('#user-actions').hide()
+  $('.user-actions').hide()
 }
 
 const signOutFailure = function (error) {
