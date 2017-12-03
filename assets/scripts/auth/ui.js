@@ -35,6 +35,7 @@ const signOutSuccess = function () {
   store.user = null
   $('#auth-actions').show()
   $('.user-actions').hide()
+  $('#eventslist').hide()
 }
 
 const signOutFailure = function (error) {

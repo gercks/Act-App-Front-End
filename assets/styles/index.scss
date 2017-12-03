@@ -2,13 +2,20 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
 body {
-  background-color: #FFCA33;
+  background-color: #057170;
+};
+
+button {
+  border-radius: 25px;
+  border-color: white;
+  color: white;
+  background-color: black;
 }
 h1 {
   font-size: 56px;
-  color: pink;
-  background-color: yellow;
+  color: white;
   text-align: center;
+  clear:left;
 };
 
 h4 {
@@ -32,4 +39,33 @@ p {
   padding: 10px;
   margin: auto;
   margin: 10px 200px;
+}
+
+#change-password-button {
+  float:left;
+  margin-left: 1000px;
+  color: white;
+}
+
+#sign-out {
+  float:left;
+  margin-left: 20px;
+};
+
+#create-event-button {
+  float:left;
+  margin: 10px 100px;
+};
+#update-event-button {
+  float:left;
+  margin: 10px 100px;
+};
+
+#delete-event-button {
+  float:left;
+  margin: 10px 100px;
+};
+
+#eventIndex {
+  clear:left;
 }
