@@ -12,9 +12,11 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+    <p id="message"></p>
     <body class="container-fluid">
       <div class="user-actions">
       <div class="signedinactions">
+            <button id="sign-out">Sign Out!</button>
     <div class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="change-password-button"><b>Change Password</b></a>
     <ul class="dropdown-menu">
@@ -31,12 +33,28 @@
             </div>
     </ul>
   </div>
-    <button id="sign-out">Sign Out!</button>
 </div>
 </div>
+<div style="clear: both;"></div>
       <h1>ActApp</h1>
-            <p id="message"></p>
+      <br>
+      <br>
       <div id="auth-actions">
+        <!-- beginning of sign in -->
+        <h3>Welcome to Act App! Please sign in.</h3>
+     <div class="row">
+        <div class="col-md-12">
+          <form id="sign-in">
+            <fieldset>
+              <input name="credentials[email]" type="text" placeholder="enter your email">
+              <input name="credentials[password]" type="password" placeholder="enter your password">
+              <button type="submit" name="submit">Sign in!</button>
+            </fieldset>
+          </form>
+          </div>
+        </div>
+      <!--beginning of sign up -->
+      <h3>Or, if you don't have an account, sign up!</h3>
       	 <div class="row">
       			<div class="col-md-12">
               <form id="sign-up">
@@ -49,58 +67,55 @@
               </form>
       			</div>
       		</div>
-          <br>
-              <!-- beginning of sign in -->
-           <div class="row">
-              <div class="col-md-12">
-                <form id="sign-in">
-                  <fieldset>
-                    <input name="credentials[email]" type="text" placeholder="enter your email">
-                    <input name="credentials[password]" type="password" placeholder="enter your password">
-                    <button type="submit" name="submit">Sign in!</button>
-                  </fieldset>
-                </form>
                 </div>
-              </div>
-            </div>
-        <!-- beginning of change password -->
-<div>
-  <button id="create-event-button" class="user-actions">Create Event!</button>
+    <br>
+    <br>
+    <div id="buttons">
+  <button id="create-event-button" class="user-actions">Create An Event</button>
+  <button id="update-event-button" class="user-actions">Update Your Event</button>
+  <button id="delete-event-button" class="user-actions">Delete Your Event</button>
+</div>
+<br>
+<div id="forms">
   <form id="create-event" class="event-forms">
     <fieldset>
       <input name="event[name]" type="text" placeholder="enter your event name">
       <input name="event[date]" type="date" placeholder="enter the date">
       <input name="event[description]" type="text" placeholder="enter the description">
-      <button type="submit" name="submit">Create Event!</button>
+      <br>
+      <br>
+      <button type="submit" name="submit" class="event-buttons">Create Event!</button>
     </fieldset>
   </form>
-</div>
-<div>
-  <button id="update-event-button" class="user-actions">Update Event!</button>
+
   <form id="event-update" class="event-forms">
     <fieldset>
       <input name="event[id]" type="text" placeholder="enter event id">
       <input name="event[name]" type="text" placeholder="enter new event name">
       <input name="event[date]" type="date" placeholder="add new event date">
       <input name="event[description]" type="text" placeholder="add new event description">
-      <button type="submit" name="submit">Update Event!</button>
+      <br>
+      <br>
+      <button type="submit" name="submit" class="event-buttons">Update Event!</button>
     </fieldset>
   </form>
-</div>
-<div>
-  <button id="delete-event-button" class="user-actions">Delete Event!</button>
+
   <form id="event-delete" class="event-forms">
     <fieldset>
       <input name="event[id]" type="text" placeholder="enter event id">
-      <button type="submit" name="submit">Delete Event!</button>
+      <br>
+      <br>
+      <button type="submit" name="submit" class="event-buttons">Delete Event!</button>
     </fieldset>
   </form>
 </div>
 <br>
 <br>
+<button id="eventIndex" class="user-actions">See all events!</button>
 <br>
-  <button id="eventIndex" class="user-actions">See all events!</button>
-  <br>
+<br>
+<br>
+
     <p id="eventslist"></p>
     </body>
 </html>

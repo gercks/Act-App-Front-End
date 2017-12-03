@@ -46,15 +46,15 @@ const onEventDelete = function (event) {
 }
 
 const showCreateEvent = function (event) {
-  $('#create-event').show()
+  $('#create-event').toggle()
 }
 
 const showUpdateEvent = function (event) {
-  $('#event-update').show()
+  $('#event-update').toggle()
 }
 
 const showDeleteEvent = function (event) {
-  $('#event-delete').show()
+  $('#event-delete').toggle()
 }
 
 const addHandlers = () => {
