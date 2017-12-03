@@ -45,11 +45,26 @@ const onEventDelete = function (event) {
     .catch(ui.eventDeletefailure)
 }
 
+const showCreateEvent = function (event) {
+  $('#create-event').show()
+}
+
+const showUpdateEvent = function (event) {
+  $('#event-update').show()
+}
+
+const showDeleteEvent = function (event) {
+  $('#event-delete').show()
+}
+
 const addHandlers = () => {
   $('#create-event').on('submit', onCreateEvent)
   $('#eventIndex').on('click', onEventIndex)
   $('#event-update').on('submit', onEventUpdate)
   $('#event-delete').on('submit', onEventDelete)
+  $('#create-event-button').on('click', showCreateEvent)
+  $('#update-event-button').on('click', showUpdateEvent)
+  $('#delete-event-button').on('click', showDeleteEvent)
 }
 
 module.exports = {

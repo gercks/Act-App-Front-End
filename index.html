@@ -63,11 +63,10 @@
                 </div>
               </div>
             </div>
-    <div class="user-actions">
         <!-- beginning of change password -->
 <div>
-  <h3>Create Event!</h3>
-  <form id="create-event">
+  <button id="create-event-button" class="user-actions">Create Event!</button>
+  <form id="create-event" class="event-forms">
     <fieldset>
       <input name="event[name]" type="text" placeholder="enter your event name">
       <input name="event[date]" type="date" placeholder="enter the date">
@@ -77,8 +76,8 @@
   </form>
 </div>
 <div>
-  <h3>Update Event!</h3>
-  <form id="event-update">
+  <button id="update-event-button" class="user-actions">Update Event!</button>
+  <form id="event-update" class="event-forms">
     <fieldset>
       <input name="event[id]" type="text" placeholder="enter event id">
       <input name="event[name]" type="text" placeholder="enter new event name">
@@ -90,17 +89,16 @@
 </div>
 <br>
 <div>
-  <h3>Delete Event!</h3>
-  <form id="event-delete">
+  <button id="delete-event-button" class="user-actions">Delete Event!</button>
+  <form id="event-delete" class="event-forms">
     <fieldset>
       <input name="event[id]" type="text" placeholder="enter event id">
       <button type="submit" name="submit">Delete Event!</button>
     </fieldset>
   </form>
 </div>
-  <button id="eventIndex">See all events!</button>
+  <button id="eventIndex" class="user-actions">See all events!</button>
   <br>
     <p id="eventslist"></p>
-</div>
     </body>
 </html>
