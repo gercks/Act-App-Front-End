@@ -1,61 +1,42 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
 
-# browser-template
+# Act App Front End Repository
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+This repository contains the front-end code for an application designed to be used as a sort of social media site for people involved with activism.
 
-## Installation
+The back end repository can be found here: https://github.com/gercks/Act-App-Back-End
 
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Replace all instances of `ga-wdi-boston.browser-template` with the name of your project.
-1.  Move into the new project and `git init`
-1.  Add all of the files in your project with the command `git add -A`
-  -   *Note:* THIS IS THE ONLY TIME YOU SHOULD RUN THIS COMMAND
-1.  Commit all of your files with the command `git commit`
-  -   Your commit title should read `Initial commit`
-1.  Install dependencies with `npm install`.
+## Technologies used
 
-## Structure
+This application was made using:
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+HTML
+CSS
+Javascript
+jQuery
+Ruby
+Ruby on Rails
 
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
+## How it was made
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
+I began this project by creating a functional back end database using Ruby and Ruby on Rails, the link to which can be found above. Then, I began on this repository.
 
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
+My first priority was to connect the front end to the back end, which I was able to do using ajax.
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+In terms of HTML and CSS, it was important to me to have the first thing users see be authorization actions, and I achieved this using jQuery. I then moved on to implementing forms for users to fill out once signed in. Finally, I used handlebars to display items from the database in an organized way.
 
-## Tasks
+The biggest struggle I continue to have with the front end is mastering CSS floats, which was an ongoing problem while developing this project. I look forward to having that down pat!
 
-Developers should run these often!
+## Improvements for next time
 
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt make-standard`: reformats all your code in the JavaScript Standard Style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+Most of the improvments I would make next time are related to the back end, but of course that would affect the front end as well. I would like for users to be able to RSVP to events and to search for events by name or date, but I didn't have enough time to make that happen this time around.
 
-## [License](LICENSE)
+## User Stories and Wireframes
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+Here is the original wireframe for this project: https://imgur.com/a/AKkh9
+
+When building this game, I kept the following user stories in mind.
+
+I am able to create my own account, sign in and out, and change my password as needed.
+I am able to create, delete, and update my own events.
+I am able to see all of the events posted on the app by other users.
+Other users are not able to do anything but view my events.
