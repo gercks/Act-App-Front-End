@@ -42,7 +42,7 @@ const onEventDelete = function (event) {
   console.log(data)
   api.eventDelete(data)
     .then(ui.eventDeleteSuccess)
-    .catch(ui.eventDeletefailure)
+    .catch(ui.eventDeleteFailure)
 }
 
 const showCreateEvent = function (event) {
