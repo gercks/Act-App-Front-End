@@ -35,9 +35,9 @@ const eventUpdateSuccess = function (data) {
   $('#event-update').hide()
 }
 
-const eventUpdateFailure = function (data) {
+const eventUpdateFailure = function (error) {
   $('#message').text('event update failed')
-  console.log(data)
+  console.log(error)
 }
 
 const eventDeleteSuccess = function (data) {
@@ -47,9 +47,9 @@ const eventDeleteSuccess = function (data) {
   $('#event-delete').hide()
 }
 
-const eventDeleteFailure = function (data) {
+const eventDeleteFailure = function (error) {
   $('#message').text('event delete failed')
-  console.log(data)
+  console.log(error)
 }
 
 module.exports = {
