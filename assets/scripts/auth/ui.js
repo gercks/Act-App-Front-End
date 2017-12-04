@@ -38,6 +38,7 @@ const signOutSuccess = function () {
   $('#auth-actions').show()
   $('.user-actions').hide()
   $('#eventslist').hide()
+  $('.event-forms').hide()
 }
 
 const signOutFailure = function (error) {
