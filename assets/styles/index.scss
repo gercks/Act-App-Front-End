@@ -26,7 +26,7 @@ h1 {
     display: inline;
 }
 
-#sign-out, #change-password {
+#sign-out, #change-password-button {
   color:white;
 }
 
@@ -74,7 +74,9 @@ h3 {
 }
 
 #buttons {
-  margin: auto;
+  margin-left: 25%;
+  margin-right: 25%;
+  width: 50%;
   width: 800px;
 }
 
@@ -86,7 +88,7 @@ h3 {
 #create-event-button, #update-event-button, #delete-event-button {
   float:left;
   font-size: 16px;
-  width: 200px;
+  max-width: 200px;
   margin: 10px 20px;
 };
 

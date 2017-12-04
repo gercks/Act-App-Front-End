@@ -8,6 +8,7 @@ const createEventSuccess = function (data) {
   $('#message').text('Event created successfully')
   console.log(data)
   $('input').val('')
+  $('#event-create').hide()
 }
 
 const createEventFailure = function (error) {
@@ -31,6 +32,7 @@ const eventUpdateSuccess = function (data) {
   $('#message').text('Event updated successfully')
   console.log(data)
   $('input').val('')
+  $('#event-update').hide()
 }
 
 const eventUpdateFailure = function (data) {
@@ -42,6 +44,7 @@ const eventDeleteSuccess = function (data) {
   $('#message').text('Event deleted successfully')
   console.log(data)
   $('input').val('')
+  $('#event-delete').hide()
 }
 
 const eventDeleteFailure = function (data) {

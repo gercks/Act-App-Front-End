@@ -19,6 +19,8 @@ const signInSuccess = function (response) {
   $('#auth-actions').hide()
   $('.user-actions').show()
   $('input').val('')
+  $('#change-password-button').show()
+  $('#sign-out').show()
   // $sign.children('input').html('')
   console.log('signIn success ran. data is :', response)
   store.user = response.user
