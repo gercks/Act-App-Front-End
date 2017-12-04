@@ -12,30 +12,39 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <p id="message"></p>
     <body class="container-fluid">
-      <div class="user-actions">
-      <div class="signedinactions">
-            <button id="sign-out">Sign Out!</button>
-    <div class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown" id="change-password-button"><b>Change Password</b></a>
-    <ul class="dropdown-menu">
-         <div class="row">
-            <div class="col-md-12">
-                <form id="change-password">
-                <fieldset>
-                  <input name="passwords[old]" type="password" placeholder="enter old password">
-                  <input name="passwords[new]" type="password" placeholder="enter new password">
-                  <button type="submit" name="submit">Change Password</button>
-                </fieldset>
-              </form>
-              </div>
-            </div>
-    </ul>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-left">
+        <li class="active"> <p id="message"></p> </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+            <!-- <li><button id="sign-out">Sign Out!</button></li> -->
+            <li class="dropdown">
+              <a id="change-password" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Change Password
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <form id="change-password">
+                   <fieldset>
+                      <input name="passwords[old]" type="password" placeholder="enter old password">
+                      <input name="passwords[new]" type="password" placeholder="enter new password">
+                      <button type="submit" name="submit">Change Password</button>
+                    </fieldset>
+                  </form>
+                </li>
+              </ul>
+             </li>
+            <li><a id="sign-out" role="button">Sign Out!</a></li>
+      </ul>
+    </div>
   </div>
-</div>
-</div>
-<div style="clear: both;"></div>
+</nav>
+
+
       <h1>ActApp</h1>
       <br>
       <br>
@@ -68,6 +77,8 @@
       			</div>
       		</div>
                 </div>
+                <button id="eventIndex" class="user-actions">See all events!</button>
+
     <br>
     <br>
     <div id="buttons">
@@ -109,9 +120,6 @@
     </fieldset>
   </form>
 </div>
-<br>
-<br>
-<button id="eventIndex" class="user-actions">See all events!</button>
 <br>
 <br>
 <br>
