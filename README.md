@@ -5,6 +5,10 @@ This repository contains the front-end code for an application designed to be us
 
 The back end repository can be found here: https://github.com/gercks/Act-App-Back-End
 
+The deployed database can be found here: https://evening-oasis-55074.herokuapp.com/events
+
+And the deployed front end can be found here: https://gercks.github.io/Act-App-Front-End/
+
 ## Technologies used
 
 This application was made using:
@@ -13,8 +17,6 @@ HTML
 CSS
 Javascript
 jQuery
-Ruby
-Ruby on Rails
 
 ## How it was made
 
