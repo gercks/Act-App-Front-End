@@ -7,7 +7,7 @@ const ui = require('./ui')
 
 const onCreateEvent = function (event) {
   event.preventDefault()
-  console.log('event created!')
+  // console.log('event created!')
   const data = getFormFields(this)
   api.createEvent(data)
     .then(ui.createEventSuccess)
@@ -16,7 +16,7 @@ const onCreateEvent = function (event) {
 
 const onEventIndex = function (event) {
   event.preventDefault()
-  console.log('getting events!')
+  // console.log('getting events!')
 
   const data = getFormFields(this)
   api.eventIndex(data)
@@ -26,7 +26,7 @@ const onEventIndex = function (event) {
 
 const onEventUpdate = function (event) {
   event.preventDefault()
-  console.log('updating your event!')
+  // console.log('updating your event!')
 
   const data = getFormFields(this)
   console.log(data.event.id)
@@ -37,9 +37,9 @@ const onEventUpdate = function (event) {
 
 const onEventDelete = function (event) {
   event.preventDefault()
-  console.log('deleting your event!')
+  // console.log('deleting your event!')
   const data = getFormFields(this)
-  console.log(data)
+  // console.log(data)
   api.eventDelete(data)
     .then(ui.eventDeleteSuccess)
     .catch(ui.eventDeletefailure)

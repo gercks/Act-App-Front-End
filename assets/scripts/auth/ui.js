@@ -5,11 +5,12 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   $('#message').html('Signed up successfully')
   $('input').val('')
-  console.log(data)
+  // console.log(data)
 }
 
 const signUpFailure = function (error) {
   $('#message').html('Error on sign up. Please try again.')
+  $('input').val('')
   console.error(error)
 }
 
@@ -17,10 +18,10 @@ const signInSuccess = function (response) {
   $('#message').html('Signed in successfully')
   $('.signedinactions').show()
   $('#auth-actions').hide()
-  $('.user-actions').show()
+  $('#create-event-button').show()
   $('input').val('')
   // $sign.children('input').html('')
-  console.log('signIn success ran. data is :', response)
+  // console.log('signIn success ran. data is :', response)
   store.user = response.user
 }
 
@@ -31,7 +32,7 @@ const signInFailure = function (error) {
 
 const signOutSuccess = function () {
   $('#message').html('Signed out successfully')
-  console.log('signOut success ran. and nothing was returned')
+  // console.log('signOut success ran. and nothing was returned')
   store.user = null
   $('#auth-actions').show()
   $('.user-actions').hide()
@@ -46,7 +47,7 @@ const signOutFailure = function (error) {
 const changePasswordSuccess = function () {
   $('#message').html('Changed password successfully')
   $('input').val('')
-  console.log('changePassword success ran. and nothing was returned')
+  // console.log('changePassword success ran. and nothing was returned')
 }
 
 const changePasswordFailure = function (error) {

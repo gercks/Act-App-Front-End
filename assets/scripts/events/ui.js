@@ -8,6 +8,8 @@ const createEventSuccess = function (data) {
   $('#message').text('Event created successfully')
   console.log(data)
   $('input').val('')
+  $('#update-event-button').show()
+  $('#delete-event-button').show()
 }
 
 const createEventFailure = function (error) {
@@ -19,7 +21,7 @@ const eventIndexSuccess = function (data) {
   $('#message').text('Here are all events!')
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#eventslist').html(showEventsHtml)
-  console.log(data)
+  // console.log(data)
 }
 
 const eventIndexFailure = function (error) {
@@ -29,24 +31,24 @@ const eventIndexFailure = function (error) {
 
 const eventUpdateSuccess = function (data) {
   $('#message').text('Event updated successfully')
-  console.log(data)
+  // console.log(data)
   $('input').val('')
 }
 
-const eventUpdateFailure = function (data) {
+const eventUpdateFailure = function (error) {
   $('#message').text('event update failed')
-  console.log(data)
+  console.log(error)
 }
 
 const eventDeleteSuccess = function (data) {
   $('#message').text('Event deleted successfully')
-  console.log(data)
+  // console.log(data)
   $('input').val('')
 }
 
-const eventDeleteFailure = function (data) {
+const eventDeleteFailure = function (error) {
   $('#message').text('event delete failed')
-  console.log(data)
+  console.log(error)
 }
 
 module.exports = {
