@@ -14,7 +14,6 @@ $(() => {
   eventsEvents.addHandlers()
   $('.user-actions').hide()
   $('.event-forms').hide()
-  $('input').val('')
 })
 
 // use require with a reference to bundle the file and use it in this file
