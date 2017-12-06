@@ -32,7 +32,7 @@ const onEventUpdate = function (event) {
   console.log(data.event.id)
   api.eventUpdate(data)
     .then(ui.eventUpdateSuccess)
-    .catch(ui.eventUpdatefailure)
+    .catch(ui.eventUpdateFailure)
 }
 
 const onEventDelete = function (event) {
@@ -42,7 +42,7 @@ const onEventDelete = function (event) {
   // console.log(data)
   api.eventDelete(data)
     .then(ui.eventDeleteSuccess)
-    .catch(ui.eventDeletefailure)
+    .catch(ui.eventDeleteFailure)
 }
 
 const showCreateEvent = function (event) {
