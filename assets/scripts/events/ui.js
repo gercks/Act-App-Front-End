@@ -9,6 +9,11 @@ const createEventSuccess = function (data) {
   console.log(data)
   $('input').val('')
   $('#event-create').hide()
+  $('#update-event-button').show()
+  $('#delete-event-button').show()
+  const showEventsHtml = showEventsTemplate({ events: data.events })
+  $('#eventslist').html(showEventsHtml)
+  $('#create-event').hide()
 }
 
 const createEventFailure = function (error) {
@@ -18,6 +23,7 @@ const createEventFailure = function (error) {
 
 const eventIndexSuccess = function (data) {
   $('#message').text('Here are all events!')
+  $('#eventslist').show()
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#eventslist').html(showEventsHtml)
   console.log(data)
@@ -32,6 +38,9 @@ const eventUpdateSuccess = function (data) {
   $('#message').text('Event updated successfully')
   console.log(data)
   $('input').val('')
+  $('#event-update').hide()
+  const showEventsHtml = showEventsTemplate({ events: data.events })
+  $('#eventslist').html(showEventsHtml)
   $('#event-update').hide()
 }
 

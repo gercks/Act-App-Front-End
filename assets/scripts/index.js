@@ -16,6 +16,7 @@ $(() => {
   $('.event-forms').hide()
   $('#change-password-button').hide()
   $('#sign-out').hide()
+  $('input').val('')
   // $('.event-forms').hide()
 })
 
