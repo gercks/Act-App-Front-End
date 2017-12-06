@@ -88,9 +88,9 @@
 <div id="forms">
   <form id="create-event" class="event-forms">
     <fieldset>
-      <input name="event[name]" type="text" placeholder="enter your event name">
-      <input name="event[date]" type="date" placeholder="enter the date">
-      <input name="event[description]" type="text" placeholder="enter the description">
+      <input name="event[name]" type="text" placeholder="enter your event name" required>
+      <input name="event[date]" type="date" placeholder="enter the date" required>
+      <input name="event[description]" type="text" placeholder="enter the description" required>
       <br>
       <br>
       <button type="submit" name="submit" class="event-buttons">Create Event!</button>
@@ -99,10 +99,10 @@
 
   <form id="event-update" class="event-forms">
     <fieldset>
-      <input name="event[id]" type="text" placeholder="enter event id">
-      <input name="event[name]" type="text" placeholder="enter new event name">
-      <input name="event[date]" type="date" placeholder="add new event date">
-      <input name="event[description]" type="text" placeholder="add new event description">
+      <input name="event[id]" type="text" placeholder="enter event id" required>
+      <input name="event[name]" type="text" placeholder="enter new event name" required>
+      <input name="event[date]" type="date" placeholder="add new event date"required>
+      <input name="event[description]" type="text" placeholder="add new event description"required>
       <br>
       <br>
       <button type="submit" name="submit" class="event-buttons">Update Event!</button>
@@ -111,7 +111,7 @@
 
   <form id="event-delete" class="event-forms">
     <fieldset>
-      <input name="event[id]" type="text" placeholder="enter event id">
+      <input name="event[id]" type="text" placeholder="enter event id"required>
       <br>
       <br>
       <button type="submit" name="submit" class="event-buttons">Delete Event!</button>
