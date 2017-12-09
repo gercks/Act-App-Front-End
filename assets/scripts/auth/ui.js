@@ -5,15 +5,15 @@ const store = require('../store')
 const signUpSuccess = function (data) {
   $('#message').html('Signed up successfully')
   $('input').val('')
-  console.log(data)
 }
 
-const signUpFailure = function (error) {
+const signUpFailure = function () {
   $('#message').html('Error on sign up. Please try again.')
-  console.error(error)
 }
 
-const signInSuccess = function (response) {
+const signInSuccess = function (data) {
+  store.user = data.user
+  console.log(store.user.event)
   $('#message').html('Signed in successfully')
   $('.signedinactions').show()
   $('#auth-actions').hide()
@@ -22,19 +22,21 @@ const signInSuccess = function (response) {
   $('input').val('')
   $('#change-password-button').show()
   $('#sign-out').show()
-  // $sign.children('input').html('')
-  console.log('signIn success ran. data is :', response)
-  store.user = response.user
+  $('#my-events-button').show()
+  // if (data.user.events.length !== 0) {
+  //   $('#event-update').show()
+  //   $('#event-delete').show()
+  // } else {
+  //   $('#massage').html('please create an event')
+  // }
 }
 
-const signInFailure = function (error) {
+const signInFailure = function () {
   $('#message').html('Error on sign in. Please try again.')
-  console.log('signIn failure ran. error is :', error)
 }
 
 const signOutSuccess = function () {
   $('#message').html('Signed out successfully')
-  console.log('signOut success ran. and nothing was returned')
   store.user = null
   $('#auth-actions').show()
   $('.user-actions').hide()
@@ -42,20 +44,17 @@ const signOutSuccess = function () {
   $('.event-forms').hide()
 }
 
-const signOutFailure = function (error) {
+const signOutFailure = function () {
   $('#message').html('Error on sign out. Please try again.')
-  console.log('signOut failure ran. error is :', error)
 }
 
 const changePasswordSuccess = function () {
   $('#message').html('Changed password successfully')
   $('input').val('')
-  console.log('changePassword success ran. and nothing was returned')
 }
 
-const changePasswordFailure = function (error) {
+const changePasswordFailure = function () {
   $('#message').html('Error on change password. Please try again.')
-  console.log('changePassword failure ran. error is :', error)
 }
 
 module.exports = {
