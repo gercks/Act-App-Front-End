@@ -6,7 +6,6 @@ const showEventsTemplate = require('../templates/events-listing.handlebars')
 
 const createEventSuccess = function (data) {
   $('#message').text('Event created successfully')
-  console.log(data)
   $('input').val('')
   $('#event-create').hide()
   $('#update-event-button').show()
@@ -16,9 +15,8 @@ const createEventSuccess = function (data) {
   $('#create-event').hide()
 }
 
-const createEventFailure = function (error) {
+const createEventFailure = function () {
   $('#message').text('Error on create event. Please try again.')
-  console.error(error)
 }
 
 const eventIndexSuccess = function (data) {
@@ -26,17 +24,14 @@ const eventIndexSuccess = function (data) {
   $('#eventslist').show()
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#eventslist').html(showEventsHtml)
-  console.log(data)
 }
 
-const eventIndexFailure = function (error) {
+const eventIndexFailure = function () {
   $('#message').text('Error on get events. Please try again.')
-  console.error(error)
 }
 
 const eventUpdateSuccess = function (data) {
   $('#message').text('Event updated successfully')
-  console.log(data)
   $('input').val('')
   $('#event-update').hide()
   const showEventsHtml = showEventsTemplate({ events: data.events })
@@ -44,21 +39,30 @@ const eventUpdateSuccess = function (data) {
   $('#event-update').hide()
 }
 
-const eventUpdateFailure = function (error) {
+const eventUpdateFailure = function () {
   $('#message').text('event update failed')
-  console.log(error)
 }
 
 const eventDeleteSuccess = function (data) {
   $('#message').text('Event deleted successfully')
-  console.log(data)
   $('input').val('')
   $('#event-delete').hide()
 }
 
-const eventDeleteFailure = function (error) {
+const eventDeleteFailure = function () {
   $('#message').text('event delete failed')
-  console.log(error)
+}
+
+const userEventsSuccess = function (data) {
+  $('#message').text('Here are your events!')
+  $('#usereventslist').show()
+  const showEventsHtml = showEventsTemplate({ events: data.events })
+  $('#usereventslist').html(showEventsHtml)
+}
+
+const userEventsFailure = function (error) {
+  $('#message').text('your event index failed')
+  console.error(error)
 }
 
 module.exports = {
@@ -69,5 +73,7 @@ module.exports = {
   eventUpdateSuccess,
   eventUpdateFailure,
   eventDeleteSuccess,
-  eventDeleteFailure
+  eventDeleteFailure,
+  userEventsSuccess,
+  userEventsFailure
 }

@@ -7,7 +7,6 @@ const ui = require('./ui')
 
 const onCreateEvent = function (event) {
   event.preventDefault()
-  // console.log('event created!')
   const data = getFormFields(this)
   api.createEvent(data)
     .then(ui.createEventSuccess)
@@ -16,7 +15,6 @@ const onCreateEvent = function (event) {
 
 const onEventIndex = function (event) {
   event.preventDefault()
-  // console.log('getting events!')
 
   const data = getFormFields(this)
   api.eventIndex(data)
@@ -26,7 +24,6 @@ const onEventIndex = function (event) {
 
 const onEventUpdate = function (event) {
   event.preventDefault()
-  // console.log('updating your event!')
 
   const data = getFormFields(this)
   console.log(data.event.id)
@@ -37,9 +34,7 @@ const onEventUpdate = function (event) {
 
 const onEventDelete = function (event) {
   event.preventDefault()
-  // console.log('deleting your event!')
   const data = getFormFields(this)
-  // console.log(data)
   api.eventDelete(data)
     .then(ui.eventDeleteSuccess)
     .catch(ui.eventDeleteFailure)
@@ -56,6 +51,15 @@ const showUpdateEvent = function (event) {
 const showDeleteEvent = function (event) {
   $('#event-delete').toggle()
 }
+//THIS IS WHAT YOU'RE WORKING ON
+const showMyEvents = function (event) {
+  event.preventDefault()
+
+  const data = getFormFields(this)
+  api.userEvents(data)
+    .then(ui.userEventsSuccess)
+    .catch(ui.userEventsFailure)
+}
 
 const addHandlers = () => {
   $('#create-event').on('submit', onCreateEvent)
@@ -65,6 +69,7 @@ const addHandlers = () => {
   $('#create-event-button').on('click', showCreateEvent)
   $('#update-event-button').on('click', showUpdateEvent)
   $('#delete-event-button').on('click', showDeleteEvent)
+  $('#my-events-button').on('click', showMyEvents)
 }
 
 module.exports = {

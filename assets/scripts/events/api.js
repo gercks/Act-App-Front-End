@@ -4,7 +4,6 @@ const config = require('../config')
 const store = require('../store')
 
 const createEvent = function (data) {
-  console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/events',
     method: 'POST',
@@ -37,7 +36,6 @@ const eventSearch = function (id) {
 }
 
 const eventUpdate = function (data) {
-  console.log(data.id)
   return $.ajax({
     url: config.apiOrigin + '/events/' + data.event.id,
     method: 'PATCH',
@@ -57,11 +55,22 @@ const eventDelete = function (data) {
     }
   })
 }
-
+// THIS IS WHAT YOU'RE WORKING ON
+const userEvents = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/my-events',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
 module.exports = {
   createEvent,
   eventIndex,
   eventSearch,
   eventUpdate,
-  eventDelete
+  eventDelete,
+  userEvents
 }
