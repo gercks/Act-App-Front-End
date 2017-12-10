@@ -86,13 +86,22 @@ h3 {
 }
 
 #create-event-button, #update-event-button, #delete-event-button {
-  float:left;
+  clear: both;
+  margin: auto;
   font-size: 16px;
   max-width: 200px;
   margin: 10px 20px;
 };
 
-#eventIndex {
+#hideEventIndex {
+  margin: auto;
+  margin-top: 20px;
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 10%;
+}
+
+#eventIndex, #my-events-button {
 clear: both;
 margin: auto;
 margin-left: 25%;
@@ -107,10 +116,10 @@ font-size: 27px;
 }
 
 .event-forms {
-  clear: left;
+  // clear: left;
   margin: auto;
-  width: 1000px;
-  margin-top: 50px;
+  // width: 1000px;
+  // margin-top: 50px;
 }
 
 .event-buttons {

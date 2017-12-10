@@ -44,14 +44,6 @@ const showCreateEvent = function (event) {
   $('#create-event').toggle()
 }
 
-const showUpdateEvent = function (event) {
-  $('#event-update').toggle()
-}
-
-const showDeleteEvent = function (event) {
-  $('#event-delete').toggle()
-}
-//THIS IS WHAT YOU'RE WORKING ON
 const showMyEvents = function (event) {
   event.preventDefault()
 
@@ -61,15 +53,29 @@ const showMyEvents = function (event) {
     .catch(ui.userEventsFailure)
 }
 
+const hideEvents = function (event) {
+  event.preventDefault()
+  $('#eventslist').hide()
+}
+
+const showUpdateEvent = function (event) {
+  $('#event-update-form').show()
+}
+
+const showDeleteEvent = function (event) {
+  $('#event-delete').show()
+}
+
 const addHandlers = () => {
   $('#create-event').on('submit', onCreateEvent)
   $('#eventIndex').on('click', onEventIndex)
-  $('#event-update').on('submit', onEventUpdate)
-  $('#event-delete').on('submit', onEventDelete)
   $('#create-event-button').on('click', showCreateEvent)
   $('#update-event-button').on('click', showUpdateEvent)
   $('#delete-event-button').on('click', showDeleteEvent)
   $('#my-events-button').on('click', showMyEvents)
+  $('#hideEventIndex').on('click', hideEvents)
+  $('#event-update').on('submit', onEventUpdate)
+  $('#event-delete').on('submit', onEventDelete)
 }
 
 module.exports = {

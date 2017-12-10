@@ -24,6 +24,8 @@ const eventIndexSuccess = function (data) {
   $('#eventslist').show()
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#eventslist').html(showEventsHtml)
+  $('#hideEventIndex').show()
+  $('#usereventslist').hide()
 }
 
 const eventIndexFailure = function () {
@@ -56,13 +58,14 @@ const eventDeleteFailure = function () {
 const userEventsSuccess = function (data) {
   $('#message').text('Here are your events!')
   $('#usereventslist').show()
+  $('#eventslist').hide()
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#usereventslist').html(showEventsHtml)
+  // $('.event-forms').hide()
 }
 
-const userEventsFailure = function (error) {
+const userEventsFailure = function () {
   $('#message').text('your event index failed')
-  console.error(error)
 }
 
 module.exports = {

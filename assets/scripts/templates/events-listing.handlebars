@@ -8,5 +8,30 @@
   <p><strong>About:</strong> {{event.description}} </p>
     <p><strong>Event id:</strong> {{event.id}}</p>
   </div>
+  <button id="update-event-button" class="user-actions">Update Your Event</button>
+  <button id="delete-event-button" class="user-actions">Delete Your Event</button>
+<div id="event-update-form">
+  <form id="event-update" class="event-forms">
+    <fieldset>
+      <input name="event[id]" type="text" placeholder="enter event id" required>
+      <input name="event[name]" type="text" placeholder="enter new event name" required>
+      <input name="event[date]" type="date" placeholder="add new event date"required>
+      <input name="event[description]" type="text" placeholder="add new event description"required>
+      <br>
+      <br>
+      <button type="submit" name="submit" class="event-buttons">Update Event!</button>
+    </fieldset>
+  </form>
+</div>
+<div>
+  <form id="event-delete" class="event-forms">
+    <fieldset>
+      <input name="event[id]" type="text" placeholder="enter event id"required>
+      <br>
+      <br>
+      <button type="submit" name="submit" class="event-buttons">Delete Event!</button>
+    </fieldset>
+  </form>
+</div>
 </div>
 {{/each}}

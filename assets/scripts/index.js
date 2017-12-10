@@ -17,7 +17,7 @@ $(() => {
   $('#change-password-button').hide()
   $('#sign-out').hide()
   $('input').val('')
-  // $('.event-forms').hide()
+  $('.event-forms').hide()
 })
 
 // use require with a reference to bundle the file and use it in this file

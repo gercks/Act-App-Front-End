@@ -23,12 +23,8 @@ const signInSuccess = function (data) {
   $('#change-password-button').show()
   $('#sign-out').show()
   $('#my-events-button').show()
-  // if (data.user.events.length !== 0) {
-  //   $('#event-update').show()
-  //   $('#event-delete').show()
-  // } else {
-  //   $('#massage').html('please create an event')
-  // }
+  $('#update-event-button').show()
+  $('#delete-event-button').show()
 }
 
 const signInFailure = function () {
