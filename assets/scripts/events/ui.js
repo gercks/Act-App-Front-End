@@ -26,6 +26,7 @@ const eventIndexSuccess = function (data) {
   $('#eventslist').html(showEventsHtml)
   $('#usereventslist').hide()
   $('#hide-events').show()
+  $('#hide-my-events').hide()
 }
 
 const eventIndexFailure = function () {
@@ -69,6 +70,7 @@ const userEventsSuccess = function (data) {
   } else {
     $('#message').text('you have no events! please create one')
     $('#usereventslist').html('')
+    $('#hide-events').hide()
   }
 }
 
