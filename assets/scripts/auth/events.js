@@ -23,19 +23,10 @@ const onSignIn = function (event) {
     .catch(ui.signInFailure)
 }
 
-const returningUser = function (data) {
-  event.preventDefault()
-  if (data.user.events.length !== 0) {
-    $('#update-event-button').show()
-    $('#delete-event-button').show()
-  } else {
-  }
-}
-
 const onSignOut = function (event) {
   event.preventDefault()
-
-  api.signOut()
+  const data = getFormFields(this)
+  api.signOut(data)
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }

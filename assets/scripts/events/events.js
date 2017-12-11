@@ -26,7 +26,6 @@ const onEventUpdate = function (event) {
   event.preventDefault()
 
   const data = getFormFields(this)
-  console.log(data.event.id)
   api.eventUpdate(data)
     .then(ui.eventUpdateSuccess)
     .catch(ui.eventUpdateFailure)
@@ -51,7 +50,7 @@ const showUpdateEvent = function (event) {
 const showDeleteEvent = function (event) {
   $('#event-delete').toggle()
 }
-//THIS IS WHAT YOU'RE WORKING ON
+
 const showMyEvents = function (event) {
   event.preventDefault()
 
@@ -59,6 +58,22 @@ const showMyEvents = function (event) {
   api.userEvents(data)
     .then(ui.userEventsSuccess)
     .catch(ui.userEventsFailure)
+}
+
+const hideEvents = function (event) {
+  event.preventDefault()
+  $('#eventslist').hide()
+  $('#hide-events').hide()
+  $('#message').text('events hidden')
+}
+
+const hideMyEvents = function (event) {
+  event.preventDefault()
+  $('#usereventslist').hide()
+  $('#hide-my-events').hide()
+  $('#update-event-button').hide()
+  $('#delete-event-button').hide()
+  $('#message').text('your events are hidden')
 }
 
 const addHandlers = () => {
@@ -70,6 +85,8 @@ const addHandlers = () => {
   $('#update-event-button').on('click', showUpdateEvent)
   $('#delete-event-button').on('click', showDeleteEvent)
   $('#my-events-button').on('click', showMyEvents)
+  $('#hide-events').on('click', hideEvents)
+  $('#hide-my-events').on('click', hideMyEvents)
 }
 
 module.exports = {
