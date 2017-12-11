@@ -67,6 +67,7 @@ const userEventsSuccess = function (data) {
     $('#update-event-button').show()
     $('#delete-event-button').show()
     $('#hide-my-events').show()
+    $('#hide-events').hide()
   } else {
     $('#message').text('you have no events! please create one')
     $('#usereventslist').html('')
