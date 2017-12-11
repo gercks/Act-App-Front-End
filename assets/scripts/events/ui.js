@@ -41,6 +41,9 @@ const eventUpdateSuccess = function (data) {
   $('#usereventslist').html(showEventsHtml)
   $('#usereventslist').show()
   $('#event-update').hide()
+  $('#update-event-button').hide()
+  $('#delete-event-button').hide()
+  $('#hide-my-events').hide()
 }
 
 const eventUpdateFailure = function () {
@@ -51,6 +54,9 @@ const eventDeleteSuccess = function (data) {
   $('#message').text('Event deleted successfully')
   $('input').val('')
   $('#event-delete').hide()
+  $('#update-event-button').hide()
+  $('#delete-event-button').hide()
+  $('#hide-my-events').hide()
 }
 
 const eventDeleteFailure = function () {
