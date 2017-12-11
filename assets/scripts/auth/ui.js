@@ -3,7 +3,7 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('#message').html('Signed up successfully')
+  $('#message').html('Signed up successfully. Now please sign in.')
   $('input').val('')
 }
 
@@ -13,7 +13,6 @@ const signUpFailure = function () {
 
 const signInSuccess = function (data) {
   store.user = data.user
-  console.log(store.user.event)
   $('#message').html('Signed in successfully')
   $('.signedinactions').show()
   $('#auth-actions').hide()
@@ -35,13 +34,14 @@ const signInFailure = function () {
   $('#message').html('Error on sign in. Please try again.')
 }
 
-const signOutSuccess = function () {
+const signOutSuccess = function (data) {
   $('#message').html('Signed out successfully')
-  store.user = null
   $('#auth-actions').show()
   $('.user-actions').hide()
   $('#eventslist').hide()
   $('.event-forms').hide()
+  $('#usereventslist').hide()
+  $('#hide-events, #hide-my-events').hide()
 }
 
 const signOutFailure = function () {

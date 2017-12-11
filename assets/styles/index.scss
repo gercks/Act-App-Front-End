@@ -1,6 +1,23 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+#hide-events, #hide-my-events {
+  clear: both;
+  color: black;
+  display: inline-block;
+  background-color: white;
+  margin: auto;
+  text-align: center;
+  margin-left: 45%;
+  margin-right: 45%;
+  width: 10%;
+  margin-top: 15px;
+}
+
+.centered {
+  margin: auto;
+}
+
 body {
   background-color: #057170;
 };
@@ -16,7 +33,13 @@ h1 {
   color: white;
   text-align: center;
   clear:left;
-};
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
 
 .navbar {
   background-color: #057170;
@@ -30,16 +53,12 @@ h1 {
   color:white;
 }
 
-// #signedinactions {
-//   float: right;
-// }
-
 #sign-up, #sign-in {
   text-align: center;
 }
 
 .handlebars {
-  clear: left;
+  // clear: left;
   background-color: white;
   color: #057170;
   border: 2px solid white;
@@ -73,30 +92,29 @@ h3 {
   margin: 10px 200px;
 }
 
-#buttons {
-  margin-left: 25%;
-  margin-right: 25%;
-  width: 50%;
-  width: 800px;
-}
-
 #forms {
   margin: auto;
   max-width: 600px;
 }
 
-#create-event-button, #update-event-button, #delete-event-button {
-  float:left;
+#update-event-button, #delete-event-button {
   font-size: 16px;
-  max-width: 200px;
+  width: 200px;
   margin: 10px 20px;
+  margin: auto;
+  text-align: center;
+  margin-left: 35%;
+  margin-right: 35%;
+  margin-top: 15px;
+  width: 30%;
 };
 
-#eventIndex {
-clear: both;
+#create-event-button, #eventIndex, #my-events-button {
+// clear: both;
 margin: auto;
 margin-left: 25%;
 margin-right: 25%;
+margin-top: 25px;
 width: 50%;
 font-size: 27px;
 }
@@ -106,13 +124,21 @@ font-size: 27px;
   color: white;
 }
 
+.event-buttons {
+  clear: both;
+  margin-left: 40%;
+  margin-right: 40%;
+  width: 20%;
+  margin: auto;
+}
+
 .event-forms {
-  clear: left;
+  clear: both;
   margin: auto;
   width: 1000px;
   margin-top: 50px;
 }
 
 .event-buttons {
-  margin: auto;
+  // margin: auto;
 }

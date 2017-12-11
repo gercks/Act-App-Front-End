@@ -1,6 +1,6 @@
 'use strict'
 
-// const store = require('../store')
+const store = require('../store')
 
 const showEventsTemplate = require('../templates/events-listing.handlebars')
 
@@ -24,6 +24,8 @@ const eventIndexSuccess = function (data) {
   $('#eventslist').show()
   const showEventsHtml = showEventsTemplate({ events: data.events })
   $('#eventslist').html(showEventsHtml)
+  $('#usereventslist').hide()
+  $('#hide-events').show()
 }
 
 const eventIndexFailure = function () {
@@ -31,11 +33,12 @@ const eventIndexFailure = function () {
 }
 
 const eventUpdateSuccess = function (data) {
+  store.event = data.event
   $('#message').text('Event updated successfully')
   $('input').val('')
-  $('#event-update').hide()
-  const showEventsHtml = showEventsTemplate({ events: data.events })
-  $('#eventslist').html(showEventsHtml)
+  const showEventsHtml = showEventsTemplate({ events: store.event.id })
+  $('#usereventslist').html(showEventsHtml)
+  $('#usereventslist').show()
   $('#event-update').hide()
 }
 
@@ -56,13 +59,21 @@ const eventDeleteFailure = function () {
 const userEventsSuccess = function (data) {
   $('#message').text('Here are your events!')
   $('#usereventslist').show()
+  $('#eventslist').hide()
   const showEventsHtml = showEventsTemplate({ events: data.events })
-  $('#usereventslist').html(showEventsHtml)
+  if (data.events.length !== 0) {
+    $('#usereventslist').html(showEventsHtml)
+    $('#update-event-button').show()
+    $('#delete-event-button').show()
+    $('#hide-my-events').show()
+  } else {
+    $('#message').text('you have no events! please create one')
+    $('#usereventslist').html('')
+  }
 }
 
-const userEventsFailure = function (error) {
+const userEventsFailure = function () {
   $('#message').text('your event index failed')
-  console.error(error)
 }
 
 module.exports = {
