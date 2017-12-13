@@ -74,6 +74,7 @@ const hideMyEvents = function (event) {
   $('#update-event-button').hide()
   $('#delete-event-button').hide()
   $('#message').text('your events are hidden')
+  $('#create-event, #event-update, #event-delete').hide()
 }
 
 const addHandlers = () => {

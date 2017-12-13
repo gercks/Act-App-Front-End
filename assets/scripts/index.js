@@ -19,6 +19,7 @@ $(() => {
   $('input').val('')
   $('#hide-events').hide()
   $('#hide-my-events').hide()
+  $('input').empty()
   // $('.event-forms').hide()
 })
 

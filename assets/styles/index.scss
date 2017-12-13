@@ -94,7 +94,7 @@ h3 {
 
 #forms {
   margin: auto;
-  max-width: 600px;
+  max-width: 800px;
 }
 
 #update-event-button, #delete-event-button {
@@ -124,7 +124,18 @@ font-size: 27px;
   color: white;
 }
 
+#create-event, #event-update, #event-delete {
+  display: inline-block;
+  clear: both;
+  margin: auto;
+  width: 70%;
+  margin-left: 15%;
+  margin-right: 15%;
+  margin-top: 50px;
+}
+
 .event-buttons {
+  display: inline-block;
   clear: both;
   margin-left: 40%;
   margin-right: 40%;
@@ -135,10 +146,8 @@ font-size: 27px;
 .event-forms {
   clear: both;
   margin: auto;
-  width: 1000px;
+  // width: 70%;
+  // margin-left: 15%;
+  // margin-right: 15%;
   margin-top: 50px;
-}
-
-.event-buttons {
-  // margin: auto;
 }

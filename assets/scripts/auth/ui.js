@@ -18,7 +18,7 @@ const signInSuccess = function (data) {
   $('#auth-actions').hide()
   $('#eventIndex').show()
   $('#create-event-button').show()
-  $('input').val('')
+  $('input').empty()
   $('#change-password-button').show()
   $('#sign-out').show()
   $('#my-events-button').show()
