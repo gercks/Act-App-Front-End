@@ -49,10 +49,10 @@ const eventUpdate = function (data) {
 const eventDelete = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/events/' + data.event.id,
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + store.user.token
-    }
+    method: 'DELETE'
+    // headers: {
+    //   Authorization: 'Token token=' + store.user.token
+    // }
   })
 }
 // THIS IS WHAT YOU'RE WORKING ON
